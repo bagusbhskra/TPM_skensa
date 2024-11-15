@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #2d37c8;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav img {
+      width: 80px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0f1675;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    .profile-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      background-color: #ffffff;
+      color: #333;
+      background-image: url('87a4e7c621a1634237bba5e182ef1222-removebg-preview.png');
+      background-size: cover;
+      background-position: center;
+      min-height: 500px;
+    }
+
+    .profile-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .profile-card img {
+      width: 100%;
+      height: 200px; /* Set a uniform height */
+      object-fit: cover; /* Ensures images fit within the container without distortion */
+    }
+
+    .profile-info {
+      padding: 15px;
+    }
+
+    .profile-info h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .profile-info p {
+      margin: 0;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="th-removebg-preview.png" alt="Logo">
+    <ul>
+      <li><a href="#" onclick="showHome()">Home</a></li>
+      <li><a href="#" onclick="showProfile()">Profile</a></li>
+      <li><a href="#" onclick="showKelas()">Kelas</a></li>
+      <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <h1 style="text-align: center; padding: 20px; color: #333;">Profile Gallery</h1>
+
+  <div class="profile-container">
+    <!-- Profile Cards -->
+    <div class="profile-card">
+      <img src="4x6 - Made Mayock.jpg" alt="Profile Image 1">
+      <div class="profile-info">
+        <h3>Nama : I Nengah Sumayasa, S.ST</h3>       
+         <p>Alamat : Br. Pasekan Tengah, Abiantuwung, Kediri, Tabanan.</p>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="1726705710774Kartu ASN - I Gusti Agung Ngurah Putranata (Gung Wah Tra).png" alt="Profile Image 2">
+      <div class="profile-info">
+        <h3>Nama : I Gusti Agung Ngurah Putranata, S.T </h3>
+        <p>Alamat :  Banjar Dinas Tembau, Desa Marga, Kec. Marga, Tabanan</p>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="1731384446928831535382644815513 - Wijaya Reload.jpg" alt="Profile Image 3">
+      <div class="profile-info">
+        <h3>Nama : AA. PUTU SEPTIADI WIJAYA, ST</h3>
+        <p>Alamat : Denpasar</p>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="foto ibu 250 x 400 px - IDA AYU RAI TRISNA DEWI.jpg" alt="Profile Image 4">
+      <div class="profile-info">
+        <h3>Nama : Ida Ayu Rai Trisna Dewi, S.Ag</h3>
+        <p>Alamat : Banjar Dinas Tengah Semeton Marga Dajan Puri, Marga Tabanan</p>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="IMG_1899 - Agus Mahendra.jpeg" alt="Profile Image 5">
+      <div class="profile-info">
+        <h3>Nama : Agus Mahendra, ST., MT.</h3>
+        <p>Alamat : Jl. Batuyang Gg. Elang XI, Batubulan, Sukawati, Gianyar.</p>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="IMG_8643 - kevin kesuma.jpeg" alt="Profile Image 6">
+      <div class="profile-info">
+        <h3>Nama : I Putu Kevin Kesuma Putra, S.Pd</h3>
+        <p>Alamat : BR Kedua, Desa Peguyangan Kangin
+        </p>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="WhatsApp Image 2024-11-12 at 11.08.39_90cd4e48 - Kristian T Andriatmoko.jpg" alt="Profile Image 7">
+      <div class="profile-info">
+        <h3>Nama : Kristian T. Andriatmoko, S.Pd</h3>
+        <p>Alamat : Jl. Sekarsari Gg. Graha Melasti IV No. 1B Kesiman Kertalangu, Denpasar Timur</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showHome() {
+      window.location.href = "index.html";
+    }
+
+    function showProfile() {
+      window.location.href = "profile.html";
+    }
+
+    function showKelas() {
+      window.location.href = "kelas.html";
+    }
+
+    function logout() {
+      const confirmation = confirm("Apakah Anda yakin ingin logout?");
+      if (confirmation) {
+        alert("Anda telah logout!");
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+</body>
+</html>

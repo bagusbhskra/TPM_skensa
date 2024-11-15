@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Kelas - SMK Negeri 1 Denpasar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #2d37c8;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 80px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0f1675;
+        }
+
+        /* Main content styling */
+        .content {
+            padding: 44px;
+            color: white;
+            background-image: url('87a4e7c621a1634237bba5e182ef1222-removebg-preview.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            text-align: center;
+            position: relative;
+        }
+
+        .content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .content h2, .content p {
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for image container */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Additional information section styling */
+        .additional-info {
+            background-color: #f3f3f3;
+            color: #333;
+            padding: 40px 20px;
+            text-align: left;
+        }
+
+        .additional-info h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #2361FF;
+        }
+
+        .additional-info ul {
+            list-style: disc;
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .btn-logout {
+            background-color: #ff4b5c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-logout:hover {
+            background-color: #ff1e3a;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="th-removebg-preview.png" alt="Logo">
+        <ul>
+            <li><a href="#" onclick="showHome()">Home</a></li>
+            <li><a href="#" onclick="showProfile()">Profile</a></li>
+            <li><a href="#" onclick="showKelas()">Kelas</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="content" id="main-content">
+        <h2>Selamat Datang di SMK Negeri 1 Denpasar</h2>
+        <p>Program Keahlian Teknik Pemesinan (TPM) di SMK Negeri 1 Denpasar fokus pada pengembangan kemampuan siswa di bidang teknik mesin, proses pemesinan, dan pemecahan masalah teknis yang berkaitan dengan mesin industri.</p>
+        <p>Dengan kurikulum berbasis Kurikulum Merdeka, siswa dibekali dengan pengetahuan praktis dan keterampilan yang siap pakai di dunia industri. Program ini bertujuan untuk mempersiapkan siswa agar siap bekerja di sektor manufaktur, otomotif, dan industri yang memerlukan keahlian di bidang pemesinan.</p>
+        <p>Kurikulum Berbasis Industri: TPM mengadopsi kurikulum yang sesuai dengan kebutuhan industri, berfokus pada keahlian praktis yang dibutuhkan di dunia kerja</p>
+        <p> Fasilitas Pendukung: Laboratorium pemesinan dengan mesin CNC, mesin bubut, dan peralatan lengkap untuk praktik langsung</p>
+        <p> Kompetensi yang Diajarkan: Pekerjaan mesin bubut, pemrograman CNC, penggambaran teknik, dan pemeliharaan mesin industri</p>
+        <p> Kegiatan Praktik dan Magang: Bekerja sama dengan berbagai perusahaan untuk menyediakan pengalaman magang bagi siswa</p>
+        <p> Sertifikasi dan Kualifikasi: Siswa berkesempatan mengikuti sertifikasi uji kompetensi yang diakui nasional untuk meningkatkan peluang kerja</p>
+        <div class="image-container">
+            <img src="WhatsApp Image 2024-11-14 at 14.11.48_2ef8b6a7.jpg" alt="Gambar 1">
+            <img src="WhatsApp Image 2024-11-14 at 14.11.49_1501d318.jpg" alt="Gambar 2">
+        </div>
+    </div>
+    <script>
+        function showHome() {
+            window.location.href = "cing.html";
+        }
+
+        function showProfile() {
+            window.location.href = "profile.html";
+        }
+
+        function showKelas() {
+            window.location.href = "kelas.html";
+        }
+
+        function logout() {
+            const confirmation = confirm("Apakah Anda yakin ingin logout?");
+            if (confirmation) {
+                alert("Anda telah logout!");
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</body>
+</html>

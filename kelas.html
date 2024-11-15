@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Kelas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Back button styling */
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px 15px;
+      background-color: #2d37c8;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #0f1675;
+    }
+
+    /* Styling grid container */
+    .kelas-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Styling tiap item kelas */
+    .kelas-item {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Hover effect */
+    .kelas-item:hover {
+      background-color: #ddd;
+      transform: translateY(-5px);
+    }
+
+    nav {
+      background-color: #2d37c8;
+      color: #fff;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    img {
+      width: 80px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0f1675;
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <img src="th-removebg-preview.png" alt="Logo">
+    <ul>
+      <li><a href="#" onclick="showHome()">Home</a></li>
+      <li><a href="#" onclick="showProfile()">Profile</a></li>
+      <li><a href="#" onclick="showKelas()">Kelas</a></li>
+      <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <h1>Data Kelas</h1>
+  <div class="kelas-container">
+    <!-- Kelas 1 -->
+    <a class="kelas-item" onclick="TPM()">
+      <h2>Kelas X</h2>
+      <p>Data Siswa X TPM</p>
+    </a>
+
+    <!-- Kelas 2 -->
+    <a class="kelas-item" onclick="TPMM()">
+      <h2>Kelas XI</h2>
+      <p>Data Siswa TPM XI</p>
+    </a>
+
+    <!-- Kelas 3 -->
+    <a class="kelas-item" onclick="TPMMM()">
+      <h2>Kelas XII</h2>
+      <p>Data Siswa TPM XII</p>
+    </a>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function showHome() {
+      window.location.href = "index.html";
+    }
+
+    function showProfile() {
+      window.location.href = "profile.html";
+    }
+
+    function showKelas() {
+      window.location.href = "kelas.html";
+    }
+
+    function logout() {
+      const confirmation = confirm("Apakah Anda yakin ingin logout?");
+      if (confirmation) {
+        alert("Anda telah logout!");
+        window.location.href = "login.html";
+      }
+    }
+
+    function TPM() {
+      window.location.href="X TPM 1.html";
+    }
+
+    function TPMM() {
+      window.location.href="XI TPM 1.html";
+    }
+
+    function TPMMM() {
+      window.location.href="XII TPM 1.html";
+    }
+  </script>
+</body>
+</html>

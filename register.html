@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        /* Mengatur gaya latar belakang */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(180deg, #2361FF, #FFFFFF);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Tampilan untuk kontainer utama */
+        .register-container {
+            background: #fff; /* Latar belakang putih untuk register box */
+            border-radius: 8px;
+            padding: 2rem;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Menambahkan gear di belakang kontainer register */
+        .register-container::before {
+            content: "";
+            position: absolute;
+            background-image: url('26fe427bfe82b1b0f58ce66495534356-removebg-preview.png'); /* Ganti dengan URL gambar gear */
+            background-size: cover;
+            opacity: 0.1;
+            top: -30px;
+            left: -30px;
+            width: 150px; /* Ukuran diperbesar */
+            height: 150px;
+            transform: rotate(45deg); /* Menempatkan gear dengan rotasi */
+        }
+
+        /* Judul register */
+        .register-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input form */
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Ikon mata */
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+        }
+
+        /* Tombol register */
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            background: #2361FF; /* Warna biru untuk tombol */
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        /* Efek hover untuk tombol register */
+        .register-container button:hover {
+            background: #1e50c0;
+        }
+
+        /* Gaya untuk teks login */
+        .login-link {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .login-link a {
+            color: #2361FF;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+    <!-- Link untuk ikon mata dari Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+            <input type="text" placeholder="Full Name" name="full_name" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <div class="input-wrapper">
+                <input type="password" placeholder="Password" name="password" id="password" required>
+                <i class="far fa-eye toggle-password" onclick="togglePasswordVisibility('password')"></i>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required>
+                <i class="far fa-eye toggle-password" onclick="togglePasswordVisibility('confirm_password')"></i>
+            </div>
+            <button href=""><a href="login.html">Register</a></button>
+        </form>
+
+        <!-- Link ke halaman login -->
+        <div class="login-link">
+            <p>Have an account? <a href="">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk toggle visibility password -->
+    <script>
+        function togglePasswordVisibility(id) {
+            var passwordField = document.getElementById(id);
+            var icon = passwordField.nextElementSibling;
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+
+        function boges() {
+            winodw.location.href="login.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Mesin</title>
+    <style>
+        /* Mengatur gaya latar belakang */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(180deg, #2361FF, #FFFFFF);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Tampilan untuk kontainer utama */
+        .login-container {
+            background: #fff; /* Latar belakang putih untuk login box */
+            border-radius: 8px;
+            padding: 2rem;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Menambahkan gear di belakang kontainer login */
+        .login-container::before {
+            content: "";
+            position: absolute;
+            background-size: cover;
+            opacity: 0.1;
+            top: -30px;
+            left: -30px;
+            width: 150px; /* Ukuran diperbesar */
+            height: 150px;
+            transform: rotate(45deg); /* Menempatkan gear dengan rotasi */
+        }
+
+        /* Judul login */
+        .login-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input form */
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Ikon mata */
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+        }
+
+        /* Tombol login */
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #2361FF; /* Warna biru untuk tombol */
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        /* Efek hover untuk tombol login */
+        .login-container button:hover {
+            background: #1e50c0;
+        }
+
+        /* Tombol media sosial */
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            gap: 10px;
+        }
+
+        .social-login button {
+            width: 100%;
+            padding: 10px;
+            background-color: #fff; /* Latar belakang putih untuk tombol media sosial */
+            border: 1px solid #ccc; /* Border abu-abu lembut */
+            border-radius: 4px;
+            color: #333;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        /* Efek hover untuk tombol media sosial */
+        .social-login button:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Ikon media sosial */
+        .social-login i {
+            font-size: 20px; /* Ukuran ikon */
+        }
+
+        /* Gaya untuk teks register */
+        .register-link {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .register-link a {
+            color: #2361FF;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+    <!-- Link for Font Awesome icons -->
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="index.html" method="POST">
+            <input type="text" placeholder="Username" name="username" required>
+            <div class="input-wrapper">
+                <input type="password" placeholder="Password" name="password" id="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Social login buttons -->
+        <div class="social-login">
+            <button><i class="fab fa-google" onclick="boges()"></i> Login with Google</button>
+            <button><i class="fab fa-facebook"></i> Login with Facebook</button>
+        </div>
+
+        <!-- Register link -->
+        <div class="register-link">
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for password toggle -->
+    <script>
+        function togglePasswordVisibility(id) {
+            const passwordField = document.getElementById(id);
+            const icon = passwordField.nextElementSibling;
+        }
+    </script>
+</body>
+</html>
